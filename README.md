@@ -7,7 +7,6 @@
 - [Project Description](#project-description)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
-- [Roadmap](#roadmap)
 - [Contribute](#contribute)
 - [Discuss](#discuss)
 
@@ -54,10 +53,6 @@ If you prefer the command line way of downloading and installing things, then fe
 ##### `flutter pub upgrade`
 
 - It gets the latest versions of all dependencies used by the app.
-
-## Roadmap
-
-- _List any features planned_
 
 ## Contribute
 
