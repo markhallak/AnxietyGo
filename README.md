@@ -5,7 +5,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Project Description](#project-description)
-- [Tech Stack](#tech-stack)
+- [Technologies being used](#technologies)
 - [Getting Started](#getting-started)
 - [Contribute](#contribute)
 - [Discuss](#discuss)
@@ -19,11 +19,11 @@ The purpose of the project is to build a cross-platform app (mainly iOS and Andr
 
 It is also possible for the user to choose a specific area where he/she wants to focus on such as public speaking and the app would show challenges that would help in that specific regard only.
 
-## Tech Stack
+## Technologies being used
 
-- Front End: Material UI
-- Backend: Flutter
-- Database: Firebase
+- Material UI
+- Flutter
+- Firebase
 
 ## Getting Started
 
