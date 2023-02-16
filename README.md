@@ -5,7 +5,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Project Description](#project-description)
-- [Technologies being used](#technologies)
+- [Technologies being used](#technologies-being-used)
 - [Getting Started](#getting-started)
 - [Contribute](#contribute)
 - [Discuss](#discuss)
