@@ -18,21 +18,21 @@ analyzer:
     implicit-dynamic: false
 
   errors:
+    camel_case_types: error
+    camel_case_extensions: error
+    non_constant_identifier_names: error
+    constant_identifier_names: error
+    always_use_package_imports: error
     always_declare_return_types: error
     avoid_web_libraries_in_flutter: error
-    camel_case_types: error
     dead_code: error
     empty_statements: error
-    file_names: error
     iterable_contains_unrelated_type: error
     list_remove_unrelated_type: error
     missing_required_param: error
     missing_return: error
     no_duplicate_case_values: error
     prefer_single_quotes: error
-    unrelated_type_equality_checks: error
-
-    #This is added as an error to make viewing code on the web easier
     lines_longer_than_80_chars: error
 
 linter:
@@ -48,6 +48,11 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
+    - camel_case_extensions
+    - camel_case_types
+    - constant_identifier_names
+    - non_constant_identifier_names
+    - always_use_package_imports
     - always_declare_return_types
     - avoid_annotating_with_dynamic
     - avoid_bool_literals_in_conditional_expressions
