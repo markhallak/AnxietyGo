@@ -12,12 +12,11 @@
 
 ## Project Description
 
-We are creating an open-source project with the purpose to help people with social anxiety. Many people could benefit from this project.
+AnxietyGo is a social anxiety app designed to help individuals who struggle with social anxiety or related disorders. The app provides a supportive and safe environment for users to connect with others who share similar experiences, and to access a range of resources and tools to manage their anxiety and improve their mental health.
 
+The app features a clean and intuitive user interface, with a range of features designed to help users manage their anxiety and improve their social skills. These features include a social networking platform, guided meditations, cognitive-behavioral therapy exercises, and more.
 
-The purpose of the project is to build a cross-platform app (mainly iOS and Android). The app would show the users social challenges for them to do which helps with their social anxiety or any related anxiety disorders.
-
-It is also possible for the user to choose a specific area where he/she wants to focus on such as public speaking and the app would show challenges that would help in that specific regard only.
+The project has a strong focus on open-source development and community collaboration. We welcome flutter developers, designers, and marketers who are passionate about mental health and social impact to join our team and help us make a positive difference in the lives of individuals struggling with social anxiety.
 
 ## Technologies being used
 
