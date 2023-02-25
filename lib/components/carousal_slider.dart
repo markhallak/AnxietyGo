@@ -3,9 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class AppCarousel extends StatefulWidget {
-   AppCarousel({super.key, this.height, this.width,this.imageList}):
-        assert(imageList==null,
-  'Image list should not be null');
+   AppCarousel({super.key, this.height, this.width,this.imageList});
 
   final double? height;
   final double? width;
@@ -15,16 +13,14 @@ class AppCarousel extends StatefulWidget {
 }
 
 class _AppCarousel extends State<AppCarousel> {
-   List<String>? imageList = [];
+   List<String>? imageList;
   CarouselController carouselController = CarouselController();
 
   @override
   void initState() {
     super.initState();
-    imageList = widget.imageList;
-    if(imageList!.isEmpty) {
-      imageList = addStaticImages();
-    }
+    imageList = widget.imageList ?? addStaticImages();
+
   }
   @override
   Widget build(BuildContext context) {
