@@ -5,7 +5,7 @@ class Challenge {
   final String description;
   final Difficulty difficulty;
 
-  /// todo: category as enum
+  /// TODO: category as enum
   final String category;
   final String thumbnailUrl;
 
