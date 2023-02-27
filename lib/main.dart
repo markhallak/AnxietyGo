@@ -1,6 +1,8 @@
 import 'package:anxiety_go/pages/homePage.dart';
 import 'package:flutter/material.dart';
 
+import 'package:anxiety_go/pages/loginPage.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
