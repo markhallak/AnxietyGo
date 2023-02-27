@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:anxiety_go/components/create_account_button.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -43,7 +45,8 @@ class LoginPage extends StatelessWidget {
             GestureDetector(
               onTap: () {},
               child: const Text('Reset Password'),
-            )
+            ),
+            const CreateAccountButton(),
           ],
         ),
       ),
