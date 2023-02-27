@@ -33,6 +33,9 @@ dependencies:
   carousel_slider: 4.2.1
   flutter:
     sdk: flutter
+  firebase_core: ^2.7.0
+  cloud_firestore: ^4.4.3
+  firebase_messaging: ^14.2.5
 
 dev_dependencies:
   flutter_test:

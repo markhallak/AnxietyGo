@@ -7,7 +7,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: const Text('Login'),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -42,7 +42,7 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 8),
             GestureDetector(
               onTap: () {},
-              child: Text('Reset Password'),
+              child: const Text('Reset Password'),
             )
           ],
         ),
