@@ -1,11 +1,11 @@
-import 'package:anxiety_go/models/difficulty.dart';
+import 'package:anxiety_go/models/Difficulty.dart';
 
 class Challenge {
   final String name;
   final String description;
   final Difficulty difficulty;
 
-  /// todo: category as enum
+  /// TODO: category as enum
   final String category;
   final String thumbnailUrl;
 

@@ -1,4 +1,4 @@
-import 'package:anxiety_go/models/difficulty.dart';
+import 'package:anxiety_go/models/Difficulty.dart';
 
 class User {
   String firstName;
