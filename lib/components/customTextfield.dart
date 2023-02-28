@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTextfield extends StatelessWidget {
-  final double height;
+  final double? height;
   final double? width;
   final TextInputType? keyboardType;
   final bool? obscureText;
@@ -10,15 +10,15 @@ class CustomTextfield extends StatelessWidget {
   final Color? borderColor;
   final double? borderRadius;
   final Icon? suffixIcon;
-  final String hintText;
+  final String? hintText;
   final Icon? prefixIcon;
   const CustomTextfield(
       {Key? key,
-      required this.hintText,
+      this.hintText,
       this.prefixIcon,
       this.suffixIcon,
       this.textStyle,
-      required this.height,
+      this.height,
       this.width,
       this.keyboardType,
       this.color,
@@ -31,7 +31,7 @@ class CustomTextfield extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? double.infinity,
-      height: height,
+      height: height ?? 55,
       child: TextField(
         style: textStyle ?? const TextStyle(),
         decoration: InputDecoration(
@@ -52,7 +52,7 @@ class CustomTextfield extends StatelessWidget {
             ),
             fillColor: color,
             filled: color != null,
-            hintText: hintText,
+            hintText: hintText ?? 'hintText',
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon),
         keyboardType: keyboardType ?? TextInputType.text,
