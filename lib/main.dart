@@ -1,4 +1,4 @@
-import 'package:anxiety_go/pages/homePage.dart';
+import 'package:anxiety_go/pages/Login.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class MoodPopup extends StatefulWidget {
   final void Function()? onClose;
 
-  MoodPopup({
+  const MoodPopup({
+    super.key,
     required this.onClose,
   });
 
@@ -16,7 +17,7 @@ class _MoodPopupState extends State<MoodPopup> {
   double _currentValue = 4;
 
   // Define the colors for each value of the slider
-  Map<double, Color> _colorMap = {
+  final Map<double, Color> _colorMap = {
     1: Colors.redAccent,
     2: Colors.orangeAccent,
     3: Colors.yellowAccent,
@@ -25,7 +26,7 @@ class _MoodPopupState extends State<MoodPopup> {
   };
 
   // Define the emojis for each value of the slider
-  Map<double, String> _emojiMap = {
+  final Map<double, String> _emojiMap = {
     1: '😢',
     2: '😕',
     3: '😐',
@@ -40,7 +41,7 @@ class _MoodPopupState extends State<MoodPopup> {
         borderRadius: BorderRadius.circular(20),
       ),
       child: AlertDialog(
-        title: Text('How are you feeling right now?'),
+        title: const Text('How are you feeling right now?'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -59,14 +60,14 @@ class _MoodPopupState extends State<MoodPopup> {
             ),
             Text(
               _emojiMap[_currentValue] ?? '',
-              style: TextStyle(fontSize: 50),
+              style: const TextStyle(fontSize: 50),
             ),
           ],
         ),
         actions: [
           TextButton(
             onPressed: widget.onClose,
-            child: Text('Close'),
+            child: const Text('Close'),
           ),
         ],
       ),

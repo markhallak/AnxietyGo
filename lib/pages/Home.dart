@@ -1,4 +1,4 @@
-import 'package:anxiety_go/components/carousalSlider.dart';
+import 'package:anxiety_go/components/CarousalSlider.dart';
 import 'package:anxiety_go/components/profilePicture.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +11,21 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<String> images = [];
+
+  List<String> tags = [];
+  List<String> options = [
+    'News',
+    'Entertainment',
+    'Politics',
+    'Automotive',
+    'Sports',
+    'Education',
+    'Fashion',
+    'Travel',
+    'Food',
+    'Tech',
+    'Science',
+  ];
 
   @override
   Widget build(BuildContext context) {

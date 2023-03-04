@@ -12,6 +12,7 @@ class CustomTextfield extends StatelessWidget {
   final Icon? suffixIcon;
   final String? hintText;
   final Icon? prefixIcon;
+
   const CustomTextfield(
       {Key? key,
       this.hintText,
@@ -35,7 +36,7 @@ class CustomTextfield extends StatelessWidget {
       child: TextField(
         style: textStyle ?? const TextStyle(),
         decoration: InputDecoration(
-          hintStyle: textStyle ?? const TextStyle(),
+            hintStyle: textStyle ?? const TextStyle(),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
                 width: 1.5,
