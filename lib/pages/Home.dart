@@ -1,5 +1,5 @@
 import 'package:anxiety_go/components/CarousalSlider.dart';
-import 'package:anxiety_go/components/profilePicture.dart';
+import 'package:anxiety_go/components/ProfilePicture.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
