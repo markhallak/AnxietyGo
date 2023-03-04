@@ -11,9 +11,7 @@ class CreateAccountButton extends StatelessWidget {
       children: [
         const Text('No account yet? '),
         TextButton(
-          onPressed: () {
-            print('Navigate to create account page');
-          },
+          onPressed: () {},
           child: const Text('Create an account'),
         ),
       ],
