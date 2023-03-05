@@ -1,6 +1,8 @@
 import 'package:anxiety_go/pages/Login.dart';
 import 'package:flutter/material.dart';
 
+import 'package:anxiety_go/shared/theme.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'AnxietyGo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: primary,
       ),
       home: const LoginPage(),
     );
