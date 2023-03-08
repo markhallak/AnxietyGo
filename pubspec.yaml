@@ -35,7 +35,6 @@ dependencies:
     sdk: flutter
   firebase_core: 2.7.0
   cloud_firestore: 4.4.3
-  searchfield: ^0.7.5
   chips_choice_null_safety: ^2.0.6
 
 dev_dependencies:

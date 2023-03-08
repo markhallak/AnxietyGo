@@ -19,7 +19,7 @@ Once you have pressed the `fork` button, GitHub will redirect you to another pag
 
 Press the `Create fork` button to fork the repository. It should redirect you into your own copy of the repo.
 
-By doing this, you are creating a copy of the ecohabit repo into your account. This way, you can make changes to the codebase without affecting the original repo.
+By doing this, you are creating a copy of the AnxietyGo repo into your account. This way, you can make changes to the codebase without affecting the original repo.
 
 
 ### 2. Clone this repository
