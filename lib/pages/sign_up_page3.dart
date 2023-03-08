@@ -50,6 +50,8 @@ class _SignUpPage4State extends State<SignUpPage4> {
               onChanged: (value) => setState(() {
                 _ans1 = value;
               }),
+              direction: Axis.horizontal,
+              crossAxisAlignment: CrossAxisAlignment.center,
               choiceItems: C2Choice.listFrom<int, String>(
                 source: ['Never', 'Sometimes', 'Always'],
                 value: (i, v) => i,
@@ -68,7 +70,6 @@ class _SignUpPage4State extends State<SignUpPage4> {
                 backgroundColor: Color(0xffB0E7D6),
                 borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
-              wrapped: true,
             ),
                 SizedBox(height: 25,),
             Text(
@@ -81,7 +82,7 @@ class _SignUpPage4State extends State<SignUpPage4> {
               onChanged: (value) => setState(() {
                 _ans2 = value;
               }),
-              direction: Axis.vertical,
+              direction: Axis.horizontal,
               crossAxisAlignment: CrossAxisAlignment.center,
               choiceItems: C2Choice.listFrom<int, String>(
                 source: [
