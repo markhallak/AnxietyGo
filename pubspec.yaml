@@ -35,7 +35,13 @@ dependencies:
     sdk: flutter
   firebase_core: 2.7.0
   cloud_firestore: 4.4.3
-  chips_choice_null_safety: ^2.0.6
+  chips_choice_null_safety: 2.0.6
+  firebase_messaging: 14.2.5
+  awesome_notifications: 0.7.4+1
+  smooth_page_indicator: 1.0.1
+  provider: 6.0.5
+  flutter_typeahead: ^4.3.7
+  transitioned_indexed_stack: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -55,15 +61,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-
+  fonts:
+    - family: Figtree-Regular
+      fonts:
+        - asset: assets/fonts/Figtree-Regular.ttf
+    - family: Figtree-Black
+      fonts:
+        - asset: assets/fonts/Figtree-Black.ttf
+    - family: Figtree-SemiBold
+      fonts:
+        - asset: assets/fonts/Figtree-SemiBold.ttf

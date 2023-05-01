@@ -17,8 +17,9 @@ class IconTextButton extends StatelessWidget {
     return OutlinedButton(
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
-        padding: const EdgeInsets.all(13),
-      ),
+          padding: const EdgeInsets.all(13),
+          foregroundColor: Colors.black,
+          side: BorderSide(color: Colors.black)),
       child: Row(
         children: [
           SizedBox(

@@ -15,7 +15,7 @@ analyzer:
 
   strong-mode:
     implicit-casts: false
-    implicit-dynamic: false
+#    implicit-dynamic: false
 
   errors:
     camel_case_types: error

@@ -20,9 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'AnxietyGo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      theme: ThemeData(fontFamily: 'Figtree-Regular'),
       home: const LoginPage(),
     );
   }

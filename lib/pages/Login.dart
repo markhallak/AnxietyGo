@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-
 import 'package:anxiety_go/components/Buttons.dart';
+import 'package:anxiety_go/pages/SignUp.dart';
+import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -18,18 +18,22 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Text('Welcome To', style: TextStyle(fontSize: 24)),
+                const Text('Welcome To',
+                    style: TextStyle(
+                        fontFamily: 'Figtree-SemiBold', fontSize: 20)),
                 const Text(
-                  'AnxietyGo',
-                  style: TextStyle(fontSize: 45, fontWeight: FontWeight.w700),
+                  'MindStep',
+                  style:
+                      TextStyle(fontFamily: 'Figtree-SemiBold', fontSize: 40),
                 ),
                 const SizedBox(height: 17),
                 Container(
                   constraints: const BoxConstraints(maxWidth: 245),
                   child: const Text(
-                    'We’re here to help you challenge yourself and tackle your'
-                    ' anxiety',
-                    style: TextStyle(fontSize: 24),
+                    'We’re here to help you challenge yourself and get you out'
+                    ' the comfort-zone',
+                    style:
+                        TextStyle(fontFamily: 'Figtree-SemiBold', fontSize: 20),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -40,13 +44,15 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 7),
-                const TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    // labelText: 'Email',
-                  ),
-                  keyboardType: TextInputType.emailAddress,
-                ),
+                const SizedBox(
+                    height: 50,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                      ),
+                      keyboardType: TextInputType.emailAddress,
+                      style: TextStyle(fontSize: 20.0, color: Colors.black),
+                    )),
                 const SizedBox(height: 12),
                 Row(
                   children: const [
@@ -54,23 +60,30 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 7),
-                const TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                  ),
-                  autocorrect: false,
-                ),
+                const SizedBox(
+                    height: 50,
+                    child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                        ),
+                        autocorrect: false,
+                        style: TextStyle(fontSize: 20.0, color: Colors.black))),
                 const SizedBox(height: 30),
                 Row(
                   children: [
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignUp()));
+                        },
                         style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 13),
-                        ),
-                        child: const Text(
+                            padding: const EdgeInsets.symmetric(vertical: 13),
+                            backgroundColor: Color(0xff5152A7)),
+                        child: Text(
                           'Continue with email',
                           style: TextStyle(fontSize: 20),
                         ),
@@ -78,7 +91,11 @@ class LoginPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 55),
+                const SizedBox(height: 25),
+                Divider(
+                  thickness: 1,
+                  color: Colors.black12,
+                ),
                 Row(
                   children: [
                     Expanded(
@@ -89,19 +106,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     )
                   ],
-                ),
-                const SizedBox(height: 19),
-                Row(
-                  children: [
-                    Expanded(
-                      child: IconTextButton(
-                        label: 'Continue with apple',
-                        iconPath: 'assets/icons/apple.png',
-                        onPressed: () {},
-                      ),
-                    )
-                  ],
-                ),
+                )
               ],
             ),
           ),

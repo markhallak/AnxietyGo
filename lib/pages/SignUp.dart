@@ -1,90 +1,81 @@
+import 'package:anxiety_go/pages/SignUpPageFour.dart';
+import 'package:anxiety_go/pages/SignUpPageOne.dart';
+import 'package:anxiety_go/pages/SignUpPageThree.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:transitioned_indexed_stack/transitioned_indexed_stack.dart';
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  final _controller = PageController(
+    initialPage: 0,
+  );
+
+  int idx = 0;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Signup'),
-      ),
-      body: SingleChildScrollView(
-        reverse: true,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 12),
-              const Text(
-                'Have u been suffering from anxiety?',
-                style: TextStyle(fontSize: 30),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 12),
-              const Text(
-                'Then you have come to the right place.',
-                style: TextStyle(fontSize: 20),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 12),
-              const Text(
-                'Just get yourself an account and get help.',
-                style: TextStyle(fontSize: 15),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 25),
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: 'Name',
-                ),
-                keyboardType: TextInputType.name,
-              ),
-              const SizedBox(height: 12),
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                ),
-                keyboardType: TextInputType.emailAddress,
-              ),
-              const SizedBox(height: 12),
-              const TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                ),
-                enableSuggestions: false,
-                autocorrect: false,
-              ),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: const Text('Sign up'),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('Already have an account?'),
-                  const SizedBox(width: 8),
-                  GestureDetector(
-                    onTap: () {},
-                    child: const Text('Sign in'),
-                  )
-                ],
-              ),
-              const SizedBox(height: 8),
-            ],
+        body: SingleChildScrollView(
+            child: Column(children: [
+      SizedBox(
+          height: MediaQuery.of(context).size.height * 0.85,
+          child: FadeIndexedStack(
+            curve: Curves.easeInOut,
+            index: idx,
+            children: [SignUpPageOne(), SignUpPageThree(), SignUpPageFour()],
+          )),
+      SizedBox(height: 20),
+      AnimatedSmoothIndicator(
+          activeIndex: idx,
+          count: 3,
+          effect: ScrollingDotsEffect(
+              dotHeight: 10,
+              dotWidth: 10,
+              dotColor: Color(0xffCFCFCF),
+              activeDotColor: Color(0xff545454))),
+      SizedBox(height: 20),
+      Row(children: [
+        SizedBox(width: 40),
+        OutlinedButton(
+          onPressed: () => setState(() {
+            idx -= 1;
+          }),
+          style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 40),
+              foregroundColor: Color(0xff5152A7),
+              side: BorderSide(color: Color(0xff5152A7))),
+          child: Text(
+            'Back',
+            style: TextStyle(fontSize: 20),
           ),
         ),
-      ),
-    );
+        SizedBox(width: 40),
+        ElevatedButton(
+          onPressed: () => setState(() {
+            idx += 1;
+          }),
+          style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 40),
+              backgroundColor: Color(0xff5152A7)),
+          child: Text(
+            'Next',
+            style: TextStyle(fontSize: 20),
+          ),
+        )
+      ])
+    ])));
   }
 }
